@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vh;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn1 {
+  outline: none;
+  border: none;
+  width: 450px;
+  height: 80px;
+  background-color: #eaeaea;
+  border: 10px solid #eaeaea;
+  box-shadow: inset 0 0 25px rgba(5, 5, 5, 0.3);
+  position: relative;
+  perspective: 800px;
+  -webkit-perspective: 800px;
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  top: 23%;
+  left: 4%;
+}
+
+input[type="text"] {
+  width: 270px;
+  height: 35px;
+  border: 2px solid gray;
+  padding: 0 0 0 15px;
+}
+
+button {
+  margin-left: 10px;
+  width: 110px;
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.cover {
+  background-color: yellow;
+  width: 430px;
+  height: 60px;
+  box-shadow: inset 0 0 25px rgba(5, 5, 5, 0.5);
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: all 1s ease-in-out;
+}
+
+.btn1:hover .cover {
+  transform: rotateX(-120deg);
+}
+
+span {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}

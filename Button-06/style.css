@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  z-index: 2;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+span {
+  z-index: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.b1 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border: 4px solid tomato;
+}
+
+.b2 {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  border: 4px solid skyblue;
+}
+
+.b3 {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  border: 4px solid green;
+}
+
+.b4 {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  border: 4px solid rgb(255, 0, 242);
+}
+
+.b1::before,
+.b2::before,
+.b3::before,
+.b4::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.b1::before {
+  background-color: tomato;
+  right: -100%;
+  top: 0;
+}
+
+.b1:hover::before {
+  right: 0%;
+}
+
+.b2::before {
+  background-color: skyblue;
+  left: -100%;
+  top: 0;
+}
+
+.b2:hover::before {
+  left: 0%;
+}
+
+.b3::before {
+  background-color: green;
+  left: 0;
+  top: -100%;
+}
+
+.b3:hover::before {
+  top: 0%;
+}
+
+.b4::before {
+  background-color: rgb(255, 0, 242);
+  left: 0;
+  bottom: -100%;
+}
+
+.b4:hover::before {
+  bottom: 0;
+}

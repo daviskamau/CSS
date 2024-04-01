@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 30px;
+  border: 2px solid black;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  position: absolute;
+  transition: all 0.7s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::after,
+.btn::before,
+span::before,
+span::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 25%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.btn::after {
+  bottom: 0;
+  right: -25%;
+}
+
+.btn::before {
+  top: 0;
+  left: -25%;
+}
+
+span::before {
+  left: 25%;
+  bottom: -100%;
+}
+
+span::after {
+  top: -100%;
+  right: 25%;
+}
+
+.btn:hover span::after {
+  right: 25%;
+  top: 0;
+}
+
+.btn:hover span::before {
+  left: 25%;
+  bottom: 0;
+}
+
+.btn:hover::before {
+  left: 0;
+}
+
+.btn:hover::after {
+  right: 0;
+}
