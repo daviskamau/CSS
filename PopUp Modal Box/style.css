@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+input {
+  display: none;
+}
+
+body {
+  position: relative;
+  background-color: gray;
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.submitBtn {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 50px;
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+  user-select: none;
+  cursor: pointer;
+}
+
+.submitBtn:active {
+  transform: scale(0.95);
+}
+
+.popupContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 500px;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.popupContainer h1 {
+  margin-top: -10px;
+  color: red;
+}
+
+.popupContainer span {
+  font-size: 50px;
+}
+
+.popupContainer p {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.okCancelButtons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.okCancelButtons label {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 7px 30px;
+  color: black;
+  background-color: white;
+  border: 1.5px solid black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.okCancelButtons .cancelBtn {
+  color: white;
+  background-color: red;
+  border: 1.5px solid red;
+}
+
+input:checked ~ .popupContainer {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
